@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client-build": "cd frontend && npm ci && npm run build && cd ../",
-    "prebuild": "npm run client-build && mv ./frontend/build ./backend/dist",
-    "start": "cd backend && npm start"
+    "client-build": "cd frontend && npm i && npm run build && cd ../",
+    "server-build": "cd backend && npm i && cd ../",
+    "prebuild": "npm run client-build && npm run server-build && mv ./frontend/build ./backend/dist",
+    "start": "cd backend && npm run dev"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
