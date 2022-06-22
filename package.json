@@ -6,7 +6,7 @@
     "client-build": "cd frontend && npm i && npm run build && cd ../",
     "server-build": "cd backend && npm i && cd ../",
     "prebuild": "npm run client-build && npm run server-build && mv ./frontend/build ./backend/dist",
-    "start": "cd backend && npm run dev"
+    "start": "cd backend && npm start"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
